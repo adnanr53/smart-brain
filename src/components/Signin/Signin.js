@@ -5,8 +5,8 @@ class Signin extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			signInEmail: '',
-			signInPassword: ''
+			signInEmail: 'john@gmail.com',
+			signInPassword: '123'
 		}
 	}
 
@@ -51,7 +51,8 @@ class Signin extends React.Component {
 				        	type="email" 
 				        	name="email-address"  
 				        	id="email-address"
-				        	onChange={this.onEmailChange} 
+				        	onChange={this.onEmailChange}
+				        	value={this.state.signInEmail} 
 				        />
 				      </div>
 				      <div className="mv3">
@@ -62,6 +63,7 @@ class Signin extends React.Component {
 				        	name="password" 
 				        	id="password"
 				        	onChange={this.onPasswordChange}
+				        	value={this.state.signInPassword}
 				        />
 				      </div>
 				    </fieldset>
